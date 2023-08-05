@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admain\DashboardController;
+use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -33,9 +35,9 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
-            Route::get('/dashboard', function () {
-                return view('dashboard');
-            })->middleware(['auth', 'verified'])->name('dashboard');
+            Route::resource('/dashboard',DashboardController::class)->name('index','dashboard')
+                ->middleware(['auth','verified']);
+            Route::resource('/',HomeController::class)->name('index','home');
 });
 
 require __DIR__.'/auth.php';
