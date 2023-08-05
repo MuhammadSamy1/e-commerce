@@ -17,9 +17,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,6 +38,7 @@ Route::group(
             Route::resource('/dashboard',DashboardController::class)->name('index','dashboard')
                 ->middleware(['auth','verified']);
             Route::resource('/',HomeController::class)->name('index','home');
+            Route::resource('/customer',CustomerConroller::class);
 });
 
 require __DIR__.'/auth.php';
