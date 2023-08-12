@@ -1,11 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Customer;
 
+use App\Http\Controllers\Controller;
 use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+//use Illuminate\Validation\Rules\Password;
+
+
 
 class CustomerController extends Controller
 {
@@ -15,8 +19,8 @@ class CustomerController extends Controller
     public function index()
     {
         $customers = Customer::all();
-        return view('pages.customer.index',[
-            'customers'=>$customers
+        return view('pages.customer.index', [
+            'customers' => $customers
         ]);
     }
 
@@ -35,15 +39,15 @@ class CustomerController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+            'password' => ['required'],
         ]);
         Customer::create([
-           'name'=>$request->name,
-            'email'=>$request->email,
-            'phone'=>$request->phone,
-            'address'=>$request->address,
-            'password'=>Hash::make($request->password)
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'password' => Hash::make($request->password)
         ]);
         return redirect()->route('customer.index');
     }
@@ -69,13 +73,13 @@ class CustomerController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
-        $customer=Customer::find($request->id);
+        $customer = Customer::find($request->id);
         $customer->update([
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'phone'=>$request->phone,
-            'address'=>$request->address,
-            'password'=>Hash::make($request->password)
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'password' => Hash::make($request->password)
         ]);
         return redirect()->route('customer.index');
     }

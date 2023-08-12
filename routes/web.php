@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admain\DashboardController;
+use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +39,7 @@ Route::group(
             Route::resource('/dashboard',DashboardController::class)->name('index','dashboard')
                 ->middleware(['auth','verified']);
             Route::resource('/',HomeController::class)->name('index','home');
-            Route::resource('/customer',CustomerConroller::class);
+            Route::resource('/customer',CustomerController::class);
 });
 
 require __DIR__.'/auth.php';
