@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
     @section('title')
-        Customers
+        customers
     @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     @section('PageTitle')
-        Customers
+        customers
     @stop
     <!-- breadcrumb -->
 @endsection
@@ -22,7 +22,7 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('customer.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">Add New Customer</a><br><br>
+                                   aria-pressed="true">Add New customer</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -33,7 +33,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
-                                            <th>address</th>
+                                            <th>Addres</th>
                                             <th>العمليات</th>
                                         </tr>
                                         </thead>

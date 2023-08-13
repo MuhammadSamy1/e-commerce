@@ -54,7 +54,7 @@
                         <br>
                         <div class="form-row">
                             <div class="col">
-                                <label for="address">Addres</label>
+                                <label for="address">Address</label>
                                 <input type="text" name="address" class="form-control">
                             </div>
                         </div>

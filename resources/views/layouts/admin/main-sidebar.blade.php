@@ -51,20 +51,20 @@
 {{--                            </ul>--}}
 {{--                     </li>--}}
 
-                      {{-- start Product sidbar --}}
-{{--                    <li>--}}
-{{--                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#product">--}}
-{{--                            <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                class="right-nav-text">{{ __('Product') }}</span></div>--}}
-{{--                                <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                <div class="clearfix"></div>--}}
-{{--                            </a>--}}
-{{--                            <ul id="product" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                <li><a href="{{ route('product.index') }}">Products</a></li>--}}
-{{--                                <li><a href="{{ route('product.create') }}">Create Product</a></li>--}}
+{{--                       start Product sidbar --}}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#product">
+                            <div class="pull-left"><i class="ti-palette"></i><span
+                                class="right-nav-text">{{ __('Product') }}</span></div>
+                                <div class="pull-right"><i class="ti-plus"></i></div>
+                                <div class="clearfix"></div>
+                            </a>
+                            <ul id="product" class="collapse" data-parent="#sidebarnav">
+                                <li><a href="{{ route('customer.index') }}">Customers</a></li>
+                                <li><a href="{{ route('customer.create') }}">Create Customer</a></li>
 
-{{--                            </ul>--}}
-{{--                    </li>--}}
+                            </ul>
+                    </li>
                     {{-- End Product sidbar --}}
                     {{-- Start Orders --}}
 {{--                    <li>--}}

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
-use App\Models\User;
+//use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 //use Illuminate\Validation\Rules\Password;
@@ -37,17 +37,17 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required'],
-        ]);
+//        $request->validate([
+//            'name' => ['required', 'string', 'max:255'],
+//            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+//            'password' => ['required', 'confirmed', Password::defaults()],
+//        ]);
         Customer::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
         ]);
         return redirect()->route('customer.index');
     }
@@ -66,6 +66,9 @@ class CustomerController extends Controller
     public function edit($id)
     {
         $customer = Customer::find($id);
+        return view('pages.customer.edit',[
+            'customer'=>$customer
+        ]);
     }
 
     /**
