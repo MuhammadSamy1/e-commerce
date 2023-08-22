@@ -35,7 +35,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                         <div class="dropdown-menu">
                             <a href="wishlist.html" class="dropdown-item">Wishlist</a>
-{{--                            <a href="{{ route('selection') }}" class="dropdown-item">Login & Register</a>--}}
+                            <a href="{{ route('selection') }}" class="dropdown-item">Login & Register</a>
                             <a href="contact.html" class="dropdown-item">Contact Us</a>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                                         @auth
                                             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                                         @else
-{{--                                            <a href="{{ route('selection') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>--}}
+                                            <a href="{{ route('selection') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
                                             @if (Route::has('register'))
                                                 <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>

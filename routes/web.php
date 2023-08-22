@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admain\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Customer\CustomerController;
+use App\Http\Controllers\Customer\Dashboard\DashboardCustomerController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -36,8 +38,21 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
+        // Login
+            Route::group(['namespace' => 'Auth'], function () {
+
+                Route::get('/login/{type}', [LoginController::class,'loginForm'])->middleware('guest')->name('login.show');
+                Route::post('/login', [LoginController::class,'login'])->name('login');
+                Route::get('/logout/{type}', [LoginController::class,'logout'])->name('logout');
+
+
+    });
+
+            Route::get('/selection',[HomeController::class,'selection'])->name('selection');
             Route::resource('/dashboard',DashboardController::class)->name('index','dashboard')
                 ->middleware(['auth','verified']);
+            Route::resource('/customer/dashboard',DashboardCustomerController::class)
+                ->name('index','/customer/dashboard');
             Route::resource('/',HomeController::class)->name('index','home');
             Route::resource('/customer',CustomerController::class);
 });

@@ -126,27 +126,27 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href=""><i class="text-info ti-settings"></i>Settings</a>
                         <a class="dropdown-item" href="#"><i class="text-danger ti-unlock"></i>
-                             <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                                        {{ __('Log Out') }}
+{{--                             <form action="{{ route('logout') }}" method="POST">--}}
+{{--                            @csrf--}}
+{{--                                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();--}}
+{{--                                this.closest('form').submit();">--}}
+{{--                                        {{ __('Log Out') }}--}}
+{{--                                </x-dropdown-link>--}}
+{{--                            </form>--}}
+
+                                @if(auth('customer')->check())
+                            <form method="GET" action="{{ route('logout','customer') }}">
+                                        @else
+                                        <form method="GET" action="{{ route('logout','web') }}">
+                                            @endif
+                                        @csrf
+                                <x-dropdown-link :href="route('logout','type')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
-
-{{--                                @if(auth('costomer')->check())--}}
-{{--                        <form method="GET" action="{{ route('logout','costomer') }}">--}}
-{{--                                    @else--}}
-{{--                                    <form method="GET" action="{{ route('logout','web') }}">--}}
-{{--                                        @endif--}}
-{{--                                    @csrf--}}
-{{--                            <x-dropdown-link :href="route('logout','type')"--}}
-{{--                                    onclick="event.preventDefault();--}}
-{{--                                                this.closest('form').submit();">--}}
-{{--                                {{ __('Log Out') }}--}}
-{{--                            </x-dropdown-link>--}}
-{{--                        </form>--}}
-                    </a>
+                        </a>
                     </div>
                 </li>
             </ul>
