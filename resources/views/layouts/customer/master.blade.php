@@ -42,9 +42,9 @@
 
             @endif --}}
 
-        @include('layouts.admin.main-header')
+        @include('layouts.customer.main-header')
 
-        @include('layouts.admin.main-sidebar')
+        @include('layouts.customer.main-sidebar')
 
         <!--=================================
  Main content -->
