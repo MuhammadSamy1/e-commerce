@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\AttachFilesTrait;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -47,9 +48,13 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $categories = Category::find($id);
-        return view('home.product-detail',[
-            'categories'=>$categories
+        //for showing list of products
+        $products=Product::where('category_id',$id)->get();
+        return view('home.product-list',[
+
+            'products'=>$products,
+            'categories'=>Category::all(),
+            'showProduct'=>Product::all(),
         ]);
     }
 
@@ -88,7 +93,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id, Request $request)
+    public function destroy(Request $request)
     {
         Category::destroy($request->id);
         return redirect()->route('category.index');

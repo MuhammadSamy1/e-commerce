@@ -1,4 +1,4 @@
-@extends('temp.layout.app')
+@extends('home.layout.app')
 @section('css')
 
 @section('title')
@@ -41,8 +41,8 @@ Product
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <form action="{{ route('orders.store') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
+{{--                                        <form action="{{ route('orders.store') }}" method="POST" enctype="multipart/form-data">--}}
+{{--                                        @csrf--}}
                                         <div class="price">
                                             <h4>Price:</h4>
                                             <input type="hidden" name="amount" value="{{ $product->price }}">
@@ -80,7 +80,7 @@ Product
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
 
                                         <div class="action">
-                                            <button class="btn" ><i class="fa fa-shopping-cart"></i>Add to Cart</button>
+                                            <button class="btn" href="{{ route('cart',$product->id) }}"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
                                             <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
                                         </div>
 
@@ -193,8 +193,10 @@ Product
                                             </div>
                                         </div>
                                         <div class="product-price">
-                                            <h3><span>$</span>99</h3>
-                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                            <h4>
+                                                <span>$</span><a href="#">{{ $product->price }}</a>
+                                            </h4>
+                                            <a class="btn" href="{{ route('product.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                                         </div>
                                     </div>
                                 </div>

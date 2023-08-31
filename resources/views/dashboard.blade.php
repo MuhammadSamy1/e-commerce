@@ -46,10 +46,10 @@
                                         <i class="fa fa-bar-chart-o highlight-icon" aria-hidden="true"></i>
                                     </span>
                         </div>
-{{--                        <div class="float-right text-right">--}}
-{{--                            <p class="card-text text-dark">categories</p>--}}
-{{--                            <h4><span>Count = </span>{{ $categories }}</h4>--}}
-{{--                        </div>--}}
+                        <div class="float-right text-right">
+                            <p class="card-text text-dark">categories</p>
+                            <h4><span>Count = </span>{{ $categories }}</h4>
+                        </div>
                     </div>
                     <p class="text-muted pt-3 mb-0 mt-2 border-top">
                         <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> 81% lower
@@ -67,10 +67,10 @@
                                         <i class="fa fa-bar-chart-o highlight-icon" aria-hidden="true"></i>
                                     </span>
                         </div>
-{{--                        <div class="float-right text-right">--}}
-{{--                            <p class="card-text text-dark">products</p>--}}
-{{--                            <h4><span>Count = </span>{{ $products }}</h4>--}}
-{{--                        </div>--}}
+                        <div class="float-right text-right">
+                            <p class="card-text text-dark">products</p>
+                            <h4><span>Count = </span>{{ $products }}</h4>
+                        </div>
                     </div>
                     <p class="text-muted pt-3 mb-0 mt-2 border-top">
                         <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> 81% lower

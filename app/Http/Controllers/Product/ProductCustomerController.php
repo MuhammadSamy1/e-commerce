@@ -1,25 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Admain;
+namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class ProductCustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $categories = Category::count();
-        $products = Product::count();
-        return view('dashboard',[
-            'categories'=>$categories,
-            'products'=>$products
-        ]);
+        //
     }
 
     /**
@@ -41,9 +36,14 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $product = Product::find($id);
+        return view('home.cart',[
+            'product'=>$product,
+            'products'=>Product::all(),
+            'categories'=>Category::all()
+        ]);
     }
 
     /**

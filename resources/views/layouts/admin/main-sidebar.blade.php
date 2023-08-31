@@ -23,33 +23,33 @@
                     <!--facultie -->
                     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{ __('E-Commerce') }}</li>
                     <!-- menu item Elements-->
-{{--                    <li>--}}
-{{--                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">--}}
-{{--                            <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                    class="right-nav-text">{{ __('Categorie') }}</span></div>--}}
-{{--                            <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                            <div class="clearfix"></div>--}}
-{{--                        </a>--}}
-{{--                        <ul id="elements" class="collapse" data-parent="#sidebarnav">--}}
-{{--                            <li><a href="{{ route('categorie.index') }}">Categorie</a></li>--}}
-{{--                            <li><a href="{{ route('categorie.create') }}">Create Categorie</a></li>--}}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
+                            <div class="pull-left"><i class="ti-palette"></i><span
+                                    class="right-nav-text">{{ __('category') }}</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="elements" class="collapse" data-parent="#sidebarnav">
+                            <li><a href="{{ route('category.index') }}">Category</a></li>
+                            <li><a href="{{ route('category.create') }}">Create Category</a></li>
 
-{{--                        </ul>--}}
-{{--                    </li>--}}
+                        </ul>
+                    </li>
                     {{-- start Product sidbar --}}
-{{--                    <li>--}}
-{{--                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#costomer">--}}
-{{--                            <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                class="right-nav-text">{{ __('Costomer') }}</span></div>--}}
-{{--                                <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                <div class="clearfix"></div>--}}
-{{--                        </a>--}}
-{{--                            <ul id="costomer" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                <li><a href="{{ route('costomer.index') }}">Show Costomer</a></li>--}}
-{{--                                <li><a href="{{ route('costomer.create') }}">Create Costomer</a></li>--}}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#customer">
+                            <div class="pull-left"><i class="ti-palette"></i><span
+                                class="right-nav-text">{{ __('Customer') }}</span></div>
+                                <div class="pull-right"><i class="ti-plus"></i></div>
+                                <div class="clearfix"></div>
+                        </a>
+                            <ul id="customer" class="collapse" data-parent="#sidebarnav">
+                                <li><a href="{{ route('customer.index') }}">Show Customer</a></li>
+                                <li><a href="{{ route('customer.create') }}">Create Customer</a></li>
 
-{{--                            </ul>--}}
-{{--                     </li>--}}
+                            </ul>
+                     </li>
 
 {{--                       start Product sidbar --}}
                     <li>
@@ -60,8 +60,8 @@
                                 <div class="clearfix"></div>
                             </a>
                             <ul id="product" class="collapse" data-parent="#sidebarnav">
-                                <li><a href="{{ route('customer.index') }}">Customers</a></li>
-                                <li><a href="{{ route('customer.create') }}">Create Customer</a></li>
+                                <li><a href="{{ route('product.index') }}">Products</a></li>
+                                <li><a href="{{ route('product.create') }}">Create Product</a></li>
 
                             </ul>
                     </li>
