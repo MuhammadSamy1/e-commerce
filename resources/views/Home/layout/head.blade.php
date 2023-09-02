@@ -25,10 +25,10 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
-{{--                    <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>--}}
+                    <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
                     <a href="product-list.html" class="nav-item nav-link">Products</a>
                     <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
-{{--                     <a href="{{ route('cart.index') }}" class="nav-item nav-link">Cart</a> --}}
+                     <a href="{{ route('cart.index') }}" class="nav-item nav-link">Cart</a>
                     <a href="checkout.html" class="nav-item nav-link">Checkout</a>
                     <a href="my-account.html" class="nav-item nav-link">My Account</a>
                     <div class="nav-item dropdown">
@@ -74,7 +74,7 @@
         <div class="row align-items-center">
             <div class="col-md-3">
                 <div class="logo">
-                    {{-- <a href="{{ route('home') }}"> --}}
+                     <a href="{{ route('home') }}">
                         <img src="/temp/img/logo.png" alt="Logo">
                     </a>
                 </div>
@@ -91,17 +91,17 @@
                         <i class="fa fa-heart"></i>
                         <span>(0)</span>
                     </a>
-{{--                    @auth('costomer')--}}
-{{--                    @if(auth('costomer')->user())--}}
-{{--                    <a href="{{ route('showcart.index') }}" class="btn cart">--}}
-{{--                        <i class="fa fa-shopping-cart"></i>--}}
-{{--                        <span>{{ auth('costomer')->user()->unreadNotifications->count() }}</span>--}}
+                    @auth('customer')
+                    @if(auth('customer')->user())
+                    <a href="{{ route('cart.index') }}" class="btn cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>{{ auth('customer')->user()->unreadNotifications->count() }}</span>
 
-{{--                        @else--}}
-{{--                        <span>(0)</span>--}}
-{{--                        @endif--}}
-{{--                    </a>--}}
-{{--                    @endauth--}}
+                        @else
+                        <span>(0)</span>
+                        @endif
+                    </a>
+                    @endauth
                 </div>
             </div>
         </div>

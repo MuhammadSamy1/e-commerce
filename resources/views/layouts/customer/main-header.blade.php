@@ -53,20 +53,20 @@
             <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">
                 <i class="ti-bell"></i>
-{{--                <span class="badge badge-danger notification-status">{{ auth('customer')->user()->unreadNotifications->count() }} </span>--}}
+                <span class="badge badge-danger notification-status">{{ auth('customer')->user()->unreadNotifications->count() }} </span>
             </a>
-{{--            @foreach (auth('customer')->user()->unreadNotifications as $notification )--}}
+            @foreach (auth('customer')->user()->unreadNotifications as $notification )
                 <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
 
 
                     <div class="dropdown-header notifications">
                         <strong>Notifications</strong>
-                        <span class="badge badge-pill badge-warning">//</span>
+                        <span class="badge badge-pill badge-warning">{{ $notification->count() }}</span>
                     </div>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">/ <small class="float-right text-muted time"> // </small> </a>
+                    <a href="#" class="dropdown-item">{{$notification->data['create_order'] }} <small class="float-right text-muted time"> {{ $notification->created_at->format('d-m-Y') }} </small> </a>
                     <a href="#" class="dropdown-item">New invoice received<small
-                            class="float-right text-muted time">//mint</small> </a>
+                            class="float-right text-muted time">{{ $notification->created_at->format('s') }}mint</small> </a>
                     <a href="#" class="dropdown-item">Server error report<small
                             class="float-right text-muted time">7 hrs</small> </a>
                     <a href="#" class="dropdown-item">Database report<small class="float-right text-muted time">1
@@ -74,7 +74,7 @@
                     <a href="#" class="dropdown-item">Order confirmation<small class="float-right text-muted time">2
                             days</small> </a>
                 </div>
-{{--            @endforeach--}}
+            @endforeach
         </li>
         {{-- End Notifications --}}
         <li class="nav-item dropdown ">

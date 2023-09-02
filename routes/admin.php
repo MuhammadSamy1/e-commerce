@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Cart\OrderController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Product\ProductController;
@@ -17,4 +18,5 @@ Route::group(
         Route::resource('/category',CategoryController::class);
         Route::resource('/product',ProductController::class);
         Route::resource('/create/cart',ProductCustomerController::class)->name('show','cart');
+        Route::resource('/order',OrderController::class);
 });
