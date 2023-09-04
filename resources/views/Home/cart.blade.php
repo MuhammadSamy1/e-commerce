@@ -1,4 +1,4 @@
-@extends('temp.home')
+@extends('home.home')
 @section('css')
 
 @section('title')
@@ -33,7 +33,7 @@ Home
                         <div class="cart-page-inner">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
-                                    <thead class="thead-dark">
+                                     <thead class="thead-dark">
                                         <tr>
                                             <th>Product</th>
                                             <th>Price</th>
@@ -64,7 +64,7 @@ Home
                                                     <button class="btn-plus"><i class="fa fa-plus"></i></button>
                                                 </div>
                                             </td>
-                                            {{-- totel --}}
+                                            {{-- total --}}
                                             <td>
                                                 {{ $order->quantity * $order->amount }}
                                             </td>
@@ -109,15 +109,15 @@ Home
                                             <h1>Cart Summary</h1>
                                             <p>Sub Total<span>{{$order->count() * $totalAmount  }}</span></p>
                                             <p>Shipping Cost<span>{{ $order->id }}</span></p>
-                                            <h2>Grand Total<span>
-                                                {{-- <p>
+                                            <h2><span>
+                                                 <p>
                                                     <strong>Total: ${{ $total}}</strong>
-                                                </p> --}}
+                                                </p>
                                             </span></h2>
                                         </div>
                                         <div class="cart-btn">
                                             <button>Update Cart</button>
-                                           <a class="btn" href="{{ route('costomer_address.index') }}"> Checkout</a>
+                                           <a class="btn" href="////"> Checkout</a>
 
                                         </div>
 

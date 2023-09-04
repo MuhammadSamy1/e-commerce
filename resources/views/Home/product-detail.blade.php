@@ -41,7 +41,7 @@ Product
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
+                                        <form action="{{ route('orders.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="price">
                                             <h4>Price:</h4>

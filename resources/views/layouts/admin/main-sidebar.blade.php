@@ -67,19 +67,19 @@
                     </li>
                     {{-- End Product sidbar --}}
                     {{-- Start Orders --}}
-{{--                    <li>--}}
-{{--                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#order">--}}
-{{--                            <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                class="right-nav-text">{{ __('Orders') }}</span></div>--}}
-{{--                                <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                <div class="clearfix"></div>--}}
-{{--                            </a>--}}
-{{--                            <ul id="order" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                <li><a href="{{ route('orders.index') }}">orders</a></li>--}}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#order">
+                            <div class="pull-left"><i class="ti-palette"></i><span
+                                class="right-nav-text">{{ __('Order') }}</span></div>
+                                <div class="pull-right"><i class="ti-plus"></i></div>
+                                <div class="clearfix"></div>
+                            </a>
+                            <ul id="order" class="collapse" data-parent="#sidebarnav">
+                                <li><a href="{{ route('orders.index')}}">orders</a></li>
 {{--                                <li><a href="{{ route('orders.create') }}">Create orders</a></li>--}}
 
-{{--                            </ul>--}}
-{{--                        </li>--}}
+                            </ul>
+                        </li>
                         {{-- End Orders --}}
 {{--                        <li>--}}
 {{--                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#address">--}}

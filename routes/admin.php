@@ -18,5 +18,5 @@ Route::group(
         Route::resource('/category',CategoryController::class);
         Route::resource('/product',ProductController::class);
         Route::resource('/create/cart',ProductCustomerController::class)->name('show','cart');
-        Route::resource('/order',OrderController::class);
+        Route::resource('/orders',OrderController::class);
 });

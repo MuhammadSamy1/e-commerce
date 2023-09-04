@@ -7,6 +7,9 @@ use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Contracts\View\View;
 use App\Notifications\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
@@ -21,14 +24,18 @@ class OrderController extends Controller
         $carts=Order::all();
         return view('pages.cart.index',[
             'carts'=>$carts,
+            'customers'=>Customer::all(),
             'categories'=>Category::all(),
-            'products'=>Product::all()
+            'products'=>Product::all(),
+
+
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
+    // creating order is only for customers.that’s why when admin try to create order it won’t work.
     public function create()
     {
         $carts=Order::all();
@@ -66,17 +73,25 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        //
+        $order = Order::find($id);
+        return view('pages.cart.show',[
+            'order'=>$order,
+            'categories'=>Category::all(),
+            'products'=>Product::all()
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Order $order)
+    public function edit($id)
     {
-        //
+        $order = Order::find($id);
+        return view('pages.cart.edit',[
+            'order'=>$order
+        ]);
     }
 
     /**
@@ -84,14 +99,25 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        $order = Order::find($request->id);
+        $order->update([
+            'amount'=>$request->amount,
+            'quantity'=>$request->quantity,
+            'size'=>$request->size,
+            'color'=>$request->color
+        ]);
+        return redirect()->route('orders.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Order $order)
+    public function destroy(Order $order, Request $request)
     {
-        //
+        Order::destroy($request->id);
+        $order->notifications()->delete();
+        return redirect()->route('orders.index')->with([
+            'success'=>'DELETE'
+        ]);
     }
 }

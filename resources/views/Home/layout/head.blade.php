@@ -28,7 +28,7 @@
                     <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
                     <a href="product-list.html" class="nav-item nav-link">Products</a>
                     <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
-                     <a href="{{ route('cart.index') }}" class="nav-item nav-link">Cart</a>
+                     <a href="{{ route('showcart.index') }}" class="nav-item nav-link">Cart</a>
                     <a href="checkout.html" class="nav-item nav-link">Checkout</a>
                     <a href="my-account.html" class="nav-item nav-link">My Account</a>
                     <div class="nav-item dropdown">
@@ -93,7 +93,7 @@
                     </a>
                     @auth('customer')
                     @if(auth('customer')->user())
-                    <a href="{{ route('cart.index') }}" class="btn cart">
+                    <a href="{{ route('showcart.index') }}" class="btn cart">
                         <i class="fa fa-shopping-cart"></i>
                         <span>{{ auth('customer')->user()->unreadNotifications->count() }}</span>
 
