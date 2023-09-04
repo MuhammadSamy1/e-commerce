@@ -108,10 +108,10 @@ Home
                                         <div class="cart-content">
                                             <h1>Cart Summary</h1>
                                             <p>Sub Total<span>{{$order->count() * $totalAmount  }}</span></p>
-                                            <p>Shipping Cost<span>{{ $order->id }}</span></p>
+                                            <p>Shipping Cost<span>10</span></p>
                                             <h2><span>
                                                  <p>
-                                                    <strong>Total: ${{ $total}}</strong>
+                                                    <strong>Total: ${{ 10 + $order->count() * $totalAmount}}</strong>
                                                 </p>
                                             </span></h2>
                                         </div>
