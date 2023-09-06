@@ -1,6 +1,9 @@
 <?php
 
 
+use App\Http\Controllers\Address\CityController;
+use App\Http\Controllers\Address\CountryController;
+use App\Http\Controllers\Address\StateController;
 use App\Http\Controllers\Cart\OrderController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Customer\CustomerController;
@@ -19,4 +22,7 @@ Route::group(
         Route::resource('/product',ProductController::class);
         Route::resource('/create/cart',ProductCustomerController::class)->name('show','cart');
         Route::resource('/orders',OrderController::class);
+        Route::resource('/countries',CountryController::class);
+        Route::resource('/states',StateController::class);
+        Route::resource('/cities',CityController::class);
 });

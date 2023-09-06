@@ -81,45 +81,45 @@
                             </ul>
                         </li>
                         {{-- End Orders --}}
-{{--                        <li>--}}
-{{--                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#address">--}}
-{{--                                <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                    class="right-nav-text">{{ __('countries') }}</span></div>--}}
-{{--                                    <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                    <div class="clearfix"></div>--}}
-{{--                                </a>--}}
-{{--                                <ul id="address" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                    <li><a href="{{ route('countries.index') }}">countries</a></li>--}}
-{{--                                    <li><a href="{{ route('countries.create') }}">Create countries</a></li>--}}
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#address">
+                                <div class="pull-left"><i class="ti-palette"></i><span
+                                    class="right-nav-text">{{ __('countries') }}</span></div>
+                                    <div class="pull-right"><i class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="address" class="collapse" data-parent="#sidebarnav">
+                                    <li><a href="{{ route('countries.index') }}">countries</a></li>
+                                    <li><a href="{{ route('countries.create') }}">Create country</a></li>
 
-{{--                                </ul>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#state">--}}
-{{--                                <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                    class="right-nav-text">{{ __('states') }}</span></div>--}}
-{{--                                    <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                    <div class="clearfix"></div>--}}
-{{--                                </a>--}}
-{{--                                <ul id="state" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                    <li><a href="{{ route('states.index') }}">states</a></li>--}}
-{{--                                    <li><a href="{{ route('states.create') }}">Create states</a></li>--}}
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#state">
+                                <div class="pull-left"><i class="ti-palette"></i><span
+                                    class="right-nav-text">{{ __('states') }}</span></div>
+                                    <div class="pull-right"><i class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="state" class="collapse" data-parent="#sidebarnav">
+                                    <li><a href="{{ route('states.index') }}">states</a></li>
+                                    <li><a href="{{ route('states.create') }}">Create state</a></li>
 
-{{--                                </ul>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#cities">--}}
-{{--                                <div class="pull-left"><i class="ti-palette"></i><span--}}
-{{--                                    class="right-nav-text">{{ __('cities') }}</span></div>--}}
-{{--                                    <div class="pull-right"><i class="ti-plus"></i></div>--}}
-{{--                                    <div class="clearfix"></div>--}}
-{{--                                </a>--}}
-{{--                                <ul id="cities" class="collapse" data-parent="#sidebarnav">--}}
-{{--                                    <li><a href="{{ route('cities.index') }}">cities</a></li>--}}
-{{--                                    <li><a href="{{ route('cities.create') }}">Create cities</a></li>--}}
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#cities">
+                                <div class="pull-left"><i class="ti-palette"></i><span
+                                    class="right-nav-text">{{ __('cities') }}</span></div>
+                                    <div class="pull-right"><i class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="cities" class="collapse" data-parent="#sidebarnav">
+                                    <li><a href="{{ route('cities.index') }}">cities</a></li>
+                                    <li><a href="{{ route('cities.create') }}">Create city</a></li>
 
-{{--                                </ul>--}}
-{{--                        </li>--}}
+                                </ul>
+                        </li>
 
                 </ul>
             </div>

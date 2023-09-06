@@ -75,7 +75,7 @@
             <div class="col-md-3">
                 <div class="logo">
                      <a href="{{ route('home') }}">
-                        <img src="/temp/img/logo.png" alt="Logo">
+                    <img src="/temp/img/logo.png" alt="Logo">
                     </a>
                 </div>
             </div>
@@ -92,16 +92,16 @@
                         <span>(0)</span>
                     </a>
                     @auth('customer')
-                    @if(auth('customer')->user())
-                    <a href="{{ route('showcart.index') }}" class="btn cart">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span>{{ auth('customer')->user()->unreadNotifications->count() }}</span>
+                        @if(auth('customer')->user())
+                            <a href="{{ route('showcart.index') }}" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>{{ auth('customer')->user()->unreadNotifications->count() }}</span>
 
-                        @else
-                        <span>(0)</span>
-                        @endif
-                    </a>
-                    @endauth
+                                @else
+                                    <span>(0)</span>
+                                @endif
+                            </a>
+                        @endauth
                 </div>
             </div>
         </div>

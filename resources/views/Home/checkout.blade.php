@@ -1,4 +1,4 @@
-@extends('temp.home')
+@extends('home.home')
 @section('css')
 
 @section('title')
@@ -26,7 +26,7 @@ Checkout
                                        <h3> Select The title Address</h3>
                                 <select name="" id="">
                                     <option selected disabled>select Address</option>
-                                    @foreach ($costomer_address as $address)
+                                    @foreach ($customer_address as $address)
                                     <option value="{{ $address->id }}">{{ $address->address_title }}</option>
                                     @endforeach
                                 </select>
@@ -35,7 +35,7 @@ Checkout
                                 <h3>or create </h3>
                                 <h2>Billing Address</h2>
                                 <div class="row">
-                                    <form class="row" action="{{ route('costomer_address.store') }}" method="POST" >
+                                    <form class="row" action="{{ route('customer_address.store') }}" method="POST" >
                                     @csrf
                                     <div class="col-md-6">
                                         <label> address_title</label>
@@ -52,16 +52,16 @@ Checkout
                                     <div class="col-md-6">
                                         <label>Last Name"</label>
                                         <input class="form-control" name="last_name" type="text" placeholder="Last Name">
-                                        <input type="hidden" name="costomer_id" value="{{ auth('costomer')->user()->id }}">
+                                        <input type="hidden" name="customer_id" value="{{ auth('customer')->user()->id }}">
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="user_id"> Countries   : <span
                                                     class="text-danger">*</span></label>
-                                            <select class="custom-select mr-sm-2" name="countrie_id">
+                                            <select class="custom-select mr-sm-2" name="country_id">
                                                 <option selected disabled>Countries ...</option>
-                                                @foreach ($countries as $countrie)
-                                                    <option value="{{ $countrie->id }}">{{ $countrie->name }}</option>
+                                                @foreach ($countries as $country)
+                                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -82,10 +82,10 @@ Checkout
                                         <div class="form-group">
                                             <label for="user_id"> Cities   : <span
                                                     class="text-danger">*</span></label>
-                                            <select class="custom-select mr-sm-2" name="citie_id">
+                                            <select class="custom-select mr-sm-2" name="city_id">
                                                 <option selected disabled>Cities ...</option>
-                                                @foreach ($cities as $citie)
-                                                    <option value="{{ $citie->id }}">{{ $citie->name }}</option>
+                                                @foreach ($cities as $city)
+                                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -205,8 +205,8 @@ Checkout
                                         </div>
                                         <div class="payment-content" id="payment-1-show">
                                             <p>
-                                                <div>Totel ${{ $totel * $count + 1 + 10}}</div>
-                                                <button><a href="{{ route('payment.index') }}">Pay New</a></button>
+                                            <div>Totel ${{ $totel * $count + 1 + 10}}</div>
+                                            <button><a href="">Pay New</a></button>
                                             </p>
                                         </div>
                                     </div>
@@ -217,7 +217,7 @@ Checkout
                                         </div>
                                         <div class="payment-content" id="payment-2-show">
                                             <p>
-                                                <a class="btn" href="{{ route('stripe.index') }}">Pay New</a>
+                                                <a class="btn" href="">Pay New</a>
                                             </p>
                                         </div>
                                     </div>
