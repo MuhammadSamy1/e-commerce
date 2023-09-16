@@ -7,7 +7,7 @@
                     <h2>Get in Touch</h2>
                     <div class="contact-info">
                         <p><i class="fa fa-map-marker"></i>Egypt</p>
-                        <p><i class="fa fa-envelope"></i>mahmoudabdelhakam89@gmail.com</p>
+                        <p><i class="fa fa-envelope"></i>muhammadsamy333@gmail.com</p>
                         <p><i class="fa fa-phone"></i>+</p>
                     </div>
                 </div>
@@ -18,11 +18,11 @@
                     <h2>Follow Us</h2>
                     <div class="contact-info">
                         <div class="social">
-                            <a href="https://twitter.com/Mahmood81811191?s=09"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/mahmoud.abdelhakm.7"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/in/mahmoud-abdelhakam-1b7a36177"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/mahmoud.abdelhakm.14/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCLMhsYz0IAakOfL3O-D5plw"><i class="fab fa-youtube"></i></a>
+{{--                            <a href=""><i class="fab fa-twitter"></i></a>--}}
+                            <a href="https://www.facebook.com/muhammadsamy24/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/muhammadsamy1/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/MuhammadSamy1"><i class="fab fa-github"></i></a>
+{{--                            <a href=""><i class="fab fa-youtube"></i></a>--}}
                         </div>
                     </div>
                 </div>

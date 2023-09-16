@@ -35,7 +35,15 @@ class CustomerAddressController extends Controller
      */
     public function create()
     {
-        //
+        $customer_address = Customer_address::all();
+        return view('home.checkout',[
+            'customer_address'=>$customer_address,
+            'countries'=>Country::all(),
+            'states'=>State::all(),
+            'cities'=>City::all(),
+            'orders'=>Order::all(),
+            'categories'=>Category::all()
+        ]);
     }
 
     /**
@@ -43,7 +51,24 @@ class CustomerAddressController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Customer_address::create([
+            'customer_id'=>$request->customer_id,
+            'country_id'=>$request->country_id,
+            'state_id'=>$request->state_id,
+            'city_id'=>$request->city_id,
+            'address_title'=>$request->address_title,
+            'default_address'=>$request->default_address,
+            'first_name'=>$request->first_name,
+            'second_name'=>$request->second_name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'address'=>$request->address,
+            'zip_code'=>$request->zip_code,
+            'po_box'=>$request->po_box
+        ]);
+        return redirect()->back()->with([
+            'success'=>'The Address Created successfully'
+        ]);
     }
 
     /**

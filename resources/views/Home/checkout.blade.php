@@ -51,7 +51,7 @@ Checkout
                                     </div>
                                     <div class="col-md-6">
                                         <label>Last Name"</label>
-                                        <input class="form-control" name="last_name" type="text" placeholder="Last Name">
+                                        <input class="form-control" name="second_name" type="text" placeholder="Last Name">
                                         <input type="hidden" name="customer_id" value="{{ auth('customer')->user()->id }}">
                                     </div>
                                     <div class="col-md-4">
@@ -104,7 +104,7 @@ Checkout
                                     </div>
                                     <div class="col-md-6">
                                         <label>ZIP Code</label>
-                                        <input class="form-control" name="zib_code" type="text" placeholder="ZIP Code">
+                                        <input class="form-control" name="zip_code" type="text" placeholder="ZIP Code">
                                     </div>
                                     <div class="col-md-6">
                                         <label>po_box</label>
@@ -181,18 +181,18 @@ Checkout
                                 <h1>Cart Total</h1>
                                 @php
                                     $count= App\Models\Order::count();
-                                    $totel=0
+                                    $total=0
                                 @endphp
                                 @foreach ($orders as $order )
 
 
-                                    <p>{{ $order->products->name }}<span>$ {{$totel+= ($order['amount']) * ($order['quantity']) }}</span></p>
+                                    <p>{{ $order->products->name }}<span>$ {{$total+= ($order['amount']) * ($order['quantity']) }}</span></p>
 
                                     @endforeach
-                                    <p class="sub-total">Sub Total<span>$ {{ $totel * $count   }}</span></p>
+                                    <p class="sub-total">Sub Total<span>$ {{ $total * $count   }}</span></p>
                                     <p class="ship-cost">Shipping Cost<span>$1</span></p>
                                     <p><span>Tax 10%</span></p>
-                                    <h2>Grand Total<span>${{ $totel * $count + 1 + 10}}</span></h2>
+                                    <h2>Grand Total<span>${{ $total * $count + 1 + 10}}</span></h2>
                                 </div>
 
                             <div class="checkout-payment">
@@ -205,8 +205,8 @@ Checkout
                                         </div>
                                         <div class="payment-content" id="payment-1-show">
                                             <p>
-                                            <div>Totel ${{ $totel * $count + 1 + 10}}</div>
-                                            <button><a href="">Pay New</a></button>
+                                            <div>total ${{ $total * $count + 1 + 10}}</div>
+                                            <button><a href="{{route('payment.index')}}">Pay Now</a></button>
                                             </p>
                                         </div>
                                     </div>
@@ -217,7 +217,7 @@ Checkout
                                         </div>
                                         <div class="payment-content" id="payment-2-show">
                                             <p>
-                                                <a class="btn" href="">Pay New</a>
+                                                <a class="btn" href="">Pay Now</a>
                                             </p>
                                         </div>
                                     </div>

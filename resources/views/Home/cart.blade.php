@@ -117,7 +117,7 @@ Home
                                         </div>
                                         <div class="cart-btn">
                                             <button>Update Cart</button>
-                                           <a class="btn" href="////"> Checkout</a>
+                                           <a class="btn" href="{{route('customer_address.index')}}"> Checkout</a>
 
                                         </div>
 
