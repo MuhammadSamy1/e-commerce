@@ -10,7 +10,7 @@
 <meta http-equiv="content-language" content="{{ app()->getLocale() }}">
 
 <!-- Favicon -->
-<link href="{{ URL::asset('temp/img/favicon.ico') }}" rel="icon">
+<link href="{{ URL::asset('assets/images/favicon.ico') }}" rel="icon">
 <link rel="shortcut icon" href="{{ URL::asset('assets/images/ECommerce.png') }}" type="image/x-icon" />
 
 

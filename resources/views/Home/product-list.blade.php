@@ -1,5 +1,3 @@
-
-
      @extends('home.layout.app')
      @section('css')
 
@@ -10,7 +8,7 @@
      @section('page-header')
          <!-- breadcrumb -->
      @section('PageTitle')
-        Home
+        Products
      @stop
      <!-- breadcrumb -->
      @endsection
@@ -33,7 +31,7 @@
                                         <div class="col-md-4">
                                             <div class="product-short">
                                                 <div class="dropdown">
-                                                    <div class="dropdown-toggle" data-toggle="dropdown">Product short by</div>
+                                                    <div class="dropdown-toggle" data-toggle="dropdown">Product sort by</div>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a href="#" class="dropdown-item">Newest</a>
                                                         <a href="#" class="dropdown-item">Popular</a>

@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <i class="fa fa-phone-alt"></i>
-                +012-345-6789
+                +2012-841-55-383
             </div>
         </div>
     </div>
@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
                     <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-                    <a href="product-list.html" class="nav-item nav-link">Products</a>
-                    <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
-                     <a href="{{ route('showcart.index') }}" class="nav-item nav-link">Cart</a>
-                    <a href="checkout.html" class="nav-item nav-link">Checkout</a>
+{{--                    <a href="{{ route('category.show',) }}" class="nav-item nav-link">Products</a>--}}
+{{--                    <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>--}}
+{{--                    <a href="{{ route('showcart.index') }}" class="nav-item nav-link">Cart</a>--}}
+{{--                    <a href="checkout.html" class="nav-item nav-link">Checkout</a>--}}
                     <a href="my-account.html" class="nav-item nav-link">My Account</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>

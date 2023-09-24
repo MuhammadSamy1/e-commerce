@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 copyright">
-                <p>Copyright &copy; <a href="">Mahmoud Abdelhakam </a>. All Rights Reserved</p>
+                <p>Copyright &copy; <a href="">Mohamed Samy </a>. All Rights Reserved</p>
             </div>
 
             <div class="col-md-6 template-by">

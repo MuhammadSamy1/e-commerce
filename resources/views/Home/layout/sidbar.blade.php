@@ -24,13 +24,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Computers</a>
+                            <a class="nav-link" href="#"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Fashion</a>
+                            <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-child"></i>kids</a>
+                            <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
@@ -55,13 +55,13 @@
             <div class="col-md-3">
                 <div class="header-img">
                     <div class="img-item">
-                        <img src="{{ URL::asset('temp/img/category-1.jpg') }}" />
+                        <img src="{{ URL::asset('temp/img/category-12.jpg') }}" />
                         <a class="img-text" href="">
                             <p>Some text goes here that describes the image</p>
                         </a>
                     </div>
                     <div class="img-item">
-                        <img src="{{ URL::asset('temp/img/category-2.jpg') }}" />
+                        <img src="{{ URL::asset('temp/img/category-9.jpg') }}" />
                         <a class="img-text" href="">
                             <p>Some text goes here that describes the image</p>
                         </a>

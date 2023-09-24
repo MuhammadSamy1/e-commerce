@@ -5,7 +5,7 @@
 </head>
 <body>
     @include('home.layout.head')
-    {{-- @include('home.layout.sidbarproduct') --}}
+{{--     @include('home.layout.sidbarproduct')--}}
     <div class="content-wrapper">
 
         @yield('page-header')
