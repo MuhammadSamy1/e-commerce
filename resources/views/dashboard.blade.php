@@ -448,7 +448,7 @@
                         <li class="mb-20">
                             <div class="media">
                                 <div class="position-relative">
-                                    <img class="img-fluid mr-15 avatar-small" src="images/item/01.png" alt="">
+                                    <img class="img-fluid mr-15 avatar-small" src="{{URL::asset('assets/images/item/01.png')}}" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-0">Car dealer <span class="float-right text-danger">
@@ -461,7 +461,7 @@
                         <li class="mb-20">
                             <div class="media">
                                 <div class="position-relative clearfix">
-                                    <img class="img-fluid mr-15 avatar-small" src="images/item/02.png" alt="">
+                                    <img class="img-fluid mr-15 avatar-small" src="{{URL::asset('assets/images/item/02.png')}}" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-0">Webster <span class="float-right text-warning">
@@ -474,7 +474,7 @@
                         <li class="mb-20">
                             <div class="media">
                                 <div class="position-relative">
-                                    <img class="img-fluid mr-15 avatar-small" src="images/item/03.png" alt="">
+                                    <img class="img-fluid mr-15 avatar-small" src="{{URL::asset('assets/images/item/03.png')}}" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-0">The corps <span class="float-right text-success">
@@ -487,7 +487,7 @@
                         <li>
                             <div class="media">
                                 <div class="position-relative clearfix">
-                                    <img class="img-fluid mr-15 avatar-small" src="images/item/04.png" alt="">
+                                    <img class="img-fluid mr-15 avatar-small" src="{{URL::asset('assets/images/item/04.png')}}" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-0">Sam martin <span
@@ -529,7 +529,7 @@
         </div>
         <div class="col-xl-4 mb-30">
             <div class="card card-statistics h-100">
-                <div class="p-4 text-center bg" style="background: url(images/bg/01.jpg);">
+                <div class="p-4 text-center bg" style="background-image: url(assets/images/bg/01.jpg);>
                     <h5 class="mb-70 text-white position-relative">Michael Bean </h5>
                     <div class="btn-group info-drop">
                         <button type="button" class="dropdown-toggle-split text-white" data-toggle="dropdown"
@@ -548,7 +548,7 @@
                 </div>
                 <div class="card-body text-center position-relative">
                     <div class="avatar-top">
-                        <img class="img-fluid w-25 rounded-circle " src="images/team/13.jpg" alt="">
+                        <img class="img-fluid w-25 rounded-circle " src="{{URL::asset('assets/images/team/13.jpg')}}" alt="">
                     </div>
                     <div class="row">
                         <div class="col-sm-4 mt-30">
