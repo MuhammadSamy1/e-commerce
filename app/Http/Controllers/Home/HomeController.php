@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,12 +15,25 @@ class HomeController extends Controller
     public function index()
     {
         return view('Home.index',[
-            'categories'=>Category::all()
+            'categories'=>Category::all(),
+            'products'=>Product::all()
         ]);
     }
 
     public function selection(){
         return view('auth.selection');
+    }
+    public function search(){
+//        $categories = Category::latest();
+//        $products = Product::latest();
+//        if (request('search')){
+//            $categories->where('name','like','%' . request('search') . '%');
+//            $products-> where('name','like','%' . request('search') . '%');
+//        }
+        return view('home.index',[
+            'categories'=>Category::latest()->filter(request(['search']))->get(),
+            'products'=>Product::latest()->filter(request(['search']))->get()
+        ]);
     }
 
     /**

@@ -49,7 +49,7 @@
                                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                         @auth
                                             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                                        @else
+                                @else
                                             <a href="{{ route('selection') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
                                             @if (Route::has('register'))
@@ -81,8 +81,10 @@
             </div>
             <div class="col-md-6">
                 <div class="search">
-                    <input type="text" placeholder="Search">
-                    <button><i class="fa fa-search"></i></button>
+                    <form method="GET" action="{{route('search')}}">
+                        <input type="text" name="search" placeholder="Search" value="{{request('search')}}">
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </div>
             <div class="col-md-3">

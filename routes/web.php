@@ -49,14 +49,14 @@ Route::group(
     });
 
             Route::get('/selection',[HomeController::class,'selection'])->name('selection');
+            Route::get('/search',[HomeController::class,'search'])->name('search');
             Route::resource('/dashboard',DashboardController::class)
                 ->name('index','dashboard')
                 ->middleware(['auth','verified']);
             Route::resource('/customer/dashboard',DashboardCustomerController::class)
                 ->name('index','/customer/dashboard');
-//                ->middleware(['auth','verified']);
             Route::resource('/',HomeController::class)->name('index','home');
-            Route::resource('/customer',CustomerController::class);
+
 });
 
 require __DIR__.'/auth.php';
