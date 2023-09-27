@@ -83,7 +83,7 @@ Home
                 <div class="category">
                     <div class="container-fluid">
                         <div class="row">
-                            @foreach($categories as $category)
+                            @forelse($categories as $category)
                                 <div class="col-md-3">
                                     <div class="category-item ch-400">
                                         <img src="{{URL::asset('attachments/upload_attachments/'.$category->image)}}"/>
@@ -92,8 +92,9 @@ Home
                                         </a>
                                     </div>
                                 </div>
-
-                            @endforeach
+                            @empty
+                                <p class="text-center">No results for what you are looking for </p>
+                            @endforelse
 {{--                    <div class="col-md-3">--}}
 {{--                        <div class="category-item ch-400">--}}
 {{--                            <img src="/temp/img/category-3.jpg" />--}}
@@ -165,8 +166,8 @@ Home
                     <h1>Featured Product</h1>
                 </div>
                 <div class="row align-items-center product-slider product-slider-4">
-                    @foreach ($products as $product)
-                    <div class="col-lg-3">
+                    @forelse ($products as $product)
+                        <div class="col-lg-3">
                         <div class="product-item">
                             <div class="product-title">
                                 <a href="#">{{ $product->name }}</a>
@@ -193,8 +194,10 @@ Home
                                 <a class="btn" href="{{ route('product.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                             </div>
                         </div>
-                    </div>
-                    @endforeach
+                        </div>
+                    @empty
+                        <p> No results for what you are looking for.. </p>
+                    @endforelse
 {{--                    <div class="col-lg-3">--}}
 {{--                        <div class="product-item">--}}
 {{--                            <div class="product-title">--}}
