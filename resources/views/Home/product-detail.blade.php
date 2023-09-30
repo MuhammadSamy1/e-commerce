@@ -81,7 +81,7 @@ Product
 
                                         <div class="action">
                                             <button class="btn" href="{{route('cart',$product->id)}}" ><i class="fa fa-shopping-cart"></i>Add to Cart</button>
-                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+{{--                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>--}}
                                         </div>
 
                                     </div>

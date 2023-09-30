@@ -55,26 +55,29 @@
                 <i class="ti-bell"></i>
                 <span class="badge badge-danger notification-status">{{ auth('customer')->user()->unreadNotifications->count() }} </span>
             </a>
-            @foreach (auth('customer')->user()->unreadNotifications as $notification )
-                <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
 
 
-                    <div class="dropdown-header notifications">
-                        <strong>Notifications</strong>
-                        <span class="badge badge-pill badge-warning">{{ $notification->count() }}</span>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">{{$notification->data['create_order'] }} <small class="float-right text-muted time"> {{ $notification->created_at->format('d-m-Y') }} </small> </a>
-                    <a href="#" class="dropdown-item">New invoice received<small
-                            class="float-right text-muted time">{{ $notification->created_at->format('s') }}mint</small> </a>
-                    <a href="#" class="dropdown-item">Server error report<small
-                            class="float-right text-muted time">7 hrs</small> </a>
-                    <a href="#" class="dropdown-item">Database report<small class="float-right text-muted time">1
-                            days</small> </a>
-                    <a href="#" class="dropdown-item">Order confirmation<small class="float-right text-muted time">2
-                            days</small> </a>
-                </div>
-            @endforeach
+                        <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
+
+
+                            <div class="dropdown-header notifications">
+                                <strong>Notifications</strong>
+                                <span class="badge badge-pill badge-warning">{{ auth('customer')->user()->unreadNotifications->count() }}</span>
+                            </div>
+                            @foreach (auth('customer')->user()->unreadNotifications as $notification )
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">{{$notification->data['create_order'] }} <small class="float-right text-muted time"> {{ $notification->created_at->format('d-m-Y') }} </small> </a>
+                                <a href="#" class="dropdown-item">New invoice received<small
+                                        class="float-right text-muted time">{{ $notification->created_at->format('s') }}mint</small> </a>
+                                <a href="#" class="dropdown-item">Server error report<small
+                                        class="float-right text-muted time">7 hrs</small> </a>
+                                <a href="#" class="dropdown-item">Database report<small class="float-right text-muted time">1
+                                        days</small> </a>
+                                <a href="#" class="dropdown-item">Order confirmation<small class="float-right text-muted time">2
+                                        days</small> </a>
+                            @endforeach
+                        </div>
+
         </li>
         {{-- End Notifications --}}
         <li class="nav-item dropdown ">

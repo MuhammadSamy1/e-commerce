@@ -36,7 +36,7 @@
 
                         </ul>
                     </li>
-                    {{-- start Product sidbar --}}
+                    {{-- start customer sidbar --}}
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#customer">
                             <div class="pull-left"><i class="ti-palette"></i><span

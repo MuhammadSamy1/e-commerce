@@ -1,3 +1,6 @@
+
+{{--for admin to show orders in admin sidebar of his dashboard--}}
+
 @extends('layouts.master')
 @section('css')
     @toastr_css
@@ -21,7 +24,7 @@
                     <div class="col-xl-12 mb-30">
                         <div class="card card-statistics h-100">
                             <div class="card-body">
-                                <a href="{{route('orders.create')}}" class="btn btn-success btn-sm" role="button"
+                                <a href="{{route('orders.index')}}" class="btn btn-success btn-sm" role="button"
                                    aria-pressed="true">Create New orders</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
