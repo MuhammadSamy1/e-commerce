@@ -53,9 +53,15 @@
             <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">
                 <i class="ti-bell"></i>
-                <span class="badge badge-danger notification-status">{{ auth('customer')->user()->unreadNotifications->count() }} </span>
+                @foreach (auth('customer')->user()->unreadNotifications as $notification)
+                    @if ($notification->count() == 0)
+                        @php
+                            continue;
+                        @endphp
+                    @endif
+                    <span class="badge badge-danger notification-status">{{ auth('customer')->user()->unreadNotifications->count() }} </span>
+                @endforeach
             </a>
-
 
                         <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
 

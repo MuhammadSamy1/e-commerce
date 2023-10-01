@@ -52,14 +52,22 @@
             <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">
                 <i class="ti-bell"></i>
-{{--                <span class="badge badge-danger notification-status">{{ auth()->user()->unreadNotifications->count() }} </span>--}}
+                @foreach (auth()->user()->unreadNotifications as $notification)
+                    @if ($notification->count() == 0)
+                        @php
+                            continue;
+                        @endphp
+                    @endif
+                            <span class="badge badge-danger notification-status">{{ auth()->user()->unreadNotifications->count() }} </span>
+                @endforeach
             </a>
+
 {{--            @foreach (auth()->user()->unreadNotifications as $notification )--}}
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
                     <div class="dropdown-header notifications">
                         <strong>Notifications</strong>
-{{--                        <span class="badge badge-pill badge-warning">{{ $notification->count() }}</span>--}}
+                        <span class="badge badge-pill badge-warning">{{ auth()->user()->unreadNotifications->count() }}</span>
                     </div>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">New registered user <small

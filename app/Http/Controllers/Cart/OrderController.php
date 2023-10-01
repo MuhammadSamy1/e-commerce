@@ -19,6 +19,7 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
+    // for admin to show orders in admin side bar
     public function index()
     {
         $carts=Order::all();
@@ -62,10 +63,11 @@ class OrderController extends Controller
             'color'=>$request->color
         ]);
         $users = Customer::where('id','=',auth('customer')->user()->id)->get();
+        $admin = User::all();
         $create_order=auth('customer')->user()->name;
 
         Notification::send($users,new Cart($cart->id,$create_order,$cart->product_id));
-
+        $admin->each->notify(new Cart($cart->id,$create_order,$cart->product_id));
         return redirect()->route('home');
 
     }
