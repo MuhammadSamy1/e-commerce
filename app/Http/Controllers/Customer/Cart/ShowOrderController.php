@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Customer\Cart;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -15,7 +16,9 @@ class ShowOrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
+        $customer_id = auth('customer')->user()->id;
+        $orders = Order::where('customer_id', $customer_id)->get();
+//        $orders = Order::all();
         $totalAmount = 0;
         foreach($orders as $item){
             $totalAmount += $item['amount'] * $item['quantity'];
@@ -24,6 +27,7 @@ class ShowOrderController extends Controller
             'orders'=>$orders,
             'products'=>Product::all(),
             'categories'=>Category::all(),
+//            'customers'=>$customers,
             'totalAmount'=>$totalAmount
         ]);
     }

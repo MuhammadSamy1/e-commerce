@@ -41,7 +41,8 @@ Route::group(
         // Login
             Route::group(['namespace' => 'Auth'], function () {
 
-                Route::get('/login/{type}', [LoginController::class,'loginForm'])->middleware('guest')->name('login.show');
+                Route::get('/login/{type}', [LoginController::class,'loginForm'])->middleware('guest')
+                                                                                     ->name('login.show');
                 Route::post('/login', [LoginController::class,'login'])->name('login');
                 Route::get('/logout/{type}', [LoginController::class,'logout'])->name('logout');
 
